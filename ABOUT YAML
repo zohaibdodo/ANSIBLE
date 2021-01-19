@@ -1,0 +1,11 @@
+Dictionary collection means 
+
+Name, hosts and tasks you may set them in any order but the lists will be followed in order:
+
+Like 
+
+	- hosts: 192.168.14.111
+	- name: playbook name
+	- tasks: 
+	 - name: tasks names
+	 - command: touch

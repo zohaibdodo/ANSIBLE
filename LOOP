@@ -1,0 +1,10 @@
+Simple Loops over Lists of Hash/Dictionaries
+
+- name: Users exist and are in the correct groups 
+user: 
+name: "{{ item.name }}" 
+state: present 
+groups: "{{ item.groups }}" 
+with_items: 
+- { name: 'zohaib', groups: 'wheel' } 
+- { name: 'ahmed', groups: 'root' }

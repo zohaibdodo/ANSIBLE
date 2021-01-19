@@ -1,0 +1,7 @@
+# First Playbook #
+
+- name: this is first play
+  hosts: node
+  tasks:
+    -  name: "Create a dummy file"
+       command: touch  /tmp/zohaib_test.txt

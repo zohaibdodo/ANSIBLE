@@ -1,0 +1,23 @@
+For Directory:
+
+#ansible all -m file -a "path=/root/Zohaib'sDirectory state=directory"
+
+To create a empty file:
+
+#ansible all -m file -a "path=/tmp/zohaib state=touch"
+
+To remove file
+
+#ansible all -m file -a "path=/tmp/zohaib state=absent"
+
+To change permission:
+
+#ansible all -m file -a "path=/tmp/zohaib mode=777 "
+
+For Soft link:
+
+#ansible all -m file -a "src=/etc/passwd dest=/tmp/newlink state=link"
+
+For Hard link:
+
+#ansible all -m file -a "src=/etc/passwd dest=/tmp/newlink state=hard"

@@ -1,0 +1,31 @@
+#ansible all -m setup
+
+#ansible node -m yum -a "name=httpd state=present" -b
+
+-b if you escalate to root permissions
+
+To roll back
+
+#ansible node -m yum -a "name=httpd state=absent" -b
+
+Ansible with command module:
+
+#ansible node -m ping
+#ansible web -m command -a "uptime" -k
+
+Ansible with raw module:
+
+#ansible web -m raw -a "ls;date;uptime" -k
+
+-k for password prompt
+
+#ansible localhost -m command -a 'id'
+
+
+Modules list:
+
+#ansible-doc -l
+
+To take manual of module:
+
+#ansible-doc copy
