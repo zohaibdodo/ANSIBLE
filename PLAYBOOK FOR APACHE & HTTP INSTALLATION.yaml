@@ -3,7 +3,7 @@ To run playbook:
 #ansible-playbook playbook_name.yml
 
 ---
-	- name: install and start apache
+- name: install and start apache
 	hosts: webservers
 	remote_user: zohaib
 	become: yes
