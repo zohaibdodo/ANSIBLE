@@ -19,16 +19,17 @@ To run playbook:
 	 -libsemanage-python
 	
 	- name: test to see if Selinux is running
-	command: getenforce
-	register: sestatus
-	change_when: false
-
+		command: getenforce
+		register: sestatus
+		change_when: false
 
 	- name: install apache
-	yum: name=httpd state=present
+		yum: name=httpd state=present
 	
 	- Name: start apache
 	- Service: name=httpd state=started enable=yes
 
 
 #ansible-playbook -I hosts site.yml
+
+---
