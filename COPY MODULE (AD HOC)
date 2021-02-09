@@ -9,7 +9,6 @@ To copy a file to managed nodes along taking backup and file source will be from
 
 #ansible node -m copy -a "src=/etc/passwd dest=/tmp remote_src=yes backup=yes"
 
-
 For Creating a new Repo:
 
 ansible all -m copy -a "src=/etc/yum.repos.d/dvd.repo dest=/etc/yum.repos.d/"
