@@ -1,4 +1,6 @@
+
 # To create a repository
+---
 
 - name: To Create a Repository
   hosts: 192.168.32.132
@@ -21,3 +23,4 @@
      yum:
        name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
        state: present
+---
