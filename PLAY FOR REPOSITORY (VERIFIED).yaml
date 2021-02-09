@@ -1,0 +1,23 @@
+# To create a repository
+
+- name: To Create a Repository
+  hosts: 192.168.32.132
+  tasks:
+   - name: "Copy Repo file from Ansible machine to Manage_Node"
+     copy:
+      src: /etc/yum.repos.d/dvd.repo
+      dest: /etc/yum.repos.d/
+   - name: "Create DVD directory in /media"
+     file:
+       path: /media/DVD
+       state: directory
+   - name: "Mounting DVD"
+     mount:
+       path: /media/DVD
+       src: /dev/sr0
+       fstype: iso9660
+       state: mounted
+   - name: Add EPEL Repo
+     yum:
+       name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+       state: present
