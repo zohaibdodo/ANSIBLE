@@ -1,0 +1,5 @@
+sudo apt-get install ansible
+
+To edit inventory file:
+
+vi /etc/ansible/hosts
