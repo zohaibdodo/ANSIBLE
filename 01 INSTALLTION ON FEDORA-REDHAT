@@ -12,7 +12,7 @@ After that installation:
 
 To check ansible version & To check configuration file for ansible:
 
-#ansible --version
+ansible --version
 
 For inventory file:
 
