@@ -1,0 +1,46 @@
+**************************************************************REDHAT/FEDORA****************************************************************************
+
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
+yum install python3 -y
+
+yum install ansible -y
+
+To check ansible version & To check configuration file for ansible:
+
+ansible --version
+
+For inventory file:
+
+vi /etc/ansible/hosts
+[web-server]
+192.168.14.129
+192.168.14.130
+[app-server]
+192.168.14.131
+
+To use other inventory file:
+
+#ansible all --list-hosts -i myinventory/inventory_file
+
+	6. For keyless system access:
+
+#ssh-keygen
+
+#ssh-copy-id -i root@192.168.14.129
+
+IF ALL USERS WANTS EQUAL RIGHT OF ANSIBLE:
+
+Copy /etc/ansible/hosts file to User's account directory and set following environment variable:
+
+#export ANSIBLE_CONFIG=/home/harry/myinventory/ansible.cfg
+
+TO SET IT PERMENANT:
+
+#vi .bashrc
+
+************************************************************INSTALLATION ON UBUNTU*****************************************************************************
+sudo apt-get install ansible -y
+
+To edit inventory file:
+
+vi /etc/ansible/hosts
