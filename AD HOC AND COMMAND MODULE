@@ -21,7 +21,6 @@ Ansible with raw module:
 
 #ansible localhost -m command -a 'id'
 
-
 Modules list:
 
 #ansible-doc -l
