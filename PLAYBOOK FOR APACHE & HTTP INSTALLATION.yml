@@ -4,19 +4,19 @@ To run playbook:
 
 ---
 - name: install and start apache
-	hosts: webservers
+  hosts: webservers
 	remote_user: zohaib
 	become: yes
 	
 	tasks:
-	-name: install epel repo
-	yum: name=epel-release state=present
+	- name: install epel repo
+	  yum: name=epel-release state=present
 	
-	 -name: install python bindings for Selinux
-	 yum: name={{item}} state=present
-	 with-items:
-	 -libselinux-python
-	 -libsemanage-python
+	- name: install python bindings for Selinux
+	  yum: name={{item}} state=present
+	  with-items:
+	  -libselinux-python
+	  -libsemanage-python
 	
 	- name: test to see if Selinux is running
 		command: getenforce
