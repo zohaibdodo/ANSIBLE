@@ -1,0 +1,10 @@
+---
+- name: My task
+  hosts: phone
+  become_user: admin
+  ansible_password: 
+  tasks:
+   - name: Pinging
+     command: restart
+
+---
