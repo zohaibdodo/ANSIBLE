@@ -1,0 +1,19 @@
+Setup WinRM Listener
+There are three ways to set up a WinRM listener:
+
+Using winrm quickconfig for HTTP or winrm quickconfig -transport:https for HTTPS. This is the easiest option to use when running outside of a domain environment and a simple listener is required. Unlike the other options, this process also has the added benefit of opening up the Firewall for the ports required and starts the WinRM service.
+
+Using Group Policy Objects. This is the best way to create a listener when the host is a member of a domain because the configuration is done automatically without any user input. For more information on group policy objects, see the Group Policy Objects documentation.
+
+Using PowerShell to create the listener with a specific configuration. This can be done by running the following PowerShell commands:
+
+$selector_set = @{
+    Address = "*"
+    Transport = "HTTPS"
+}
+$value_set = @{
+    CertificateThumbprint = "E6CDAA82EEAF2ECE8546E05DB7F3E01AA47D76CE"
+}
+
+New-WSManInstance -ResourceURI "winrm/config/Listener" -SelectorSet $selector_set -ValueSet $value_set
+To see the other options with this PowerShell cmdlet, see New-WSManInstance.
