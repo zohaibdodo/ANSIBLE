@@ -1,0 +1,7 @@
+To install a utility/package remotely on Windows based machine.
+
+https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html
+
+To setup WinRM run following command on powershell:
+
+winrm quickconfig
