@@ -17,3 +17,8 @@ $value_set = @{
 
 New-WSManInstance -ResourceURI "winrm/config/Listener" -SelectorSet $selector_set -ValueSet $value_set
 To see the other options with this PowerShell cmdlet, see New-WSManInstance.
+***************************************************************************************************************************************************
+
+PowerShell version check:
+
+$PSVersionTable
