@@ -1,4 +1,4 @@
-**************************************************************REDHAT/FEDORA****************************************************************************
+####REDHAT/FEDORA####
 
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
 yum install python3 -y
@@ -38,5 +38,6 @@ TO SET IT PERMENANT:
 
 #vi .bashrc
 
-**************************************************INSTALLATION ON UBUNTU*****************************************************************************
+####INSTALLATION ON UBUNTU####
+
 sudo apt-get install ansible -y
