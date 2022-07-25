@@ -1,0 +1,7 @@
+-
+  name: Running Playbook for copy commmand
+  hosts: centosclient
+  tasks:
+    - 
+      name: Playbook for copy command
+      copy: src=/home/vagrant/zohaib.txt dest=/tmp/

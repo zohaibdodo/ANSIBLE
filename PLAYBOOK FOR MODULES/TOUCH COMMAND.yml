@@ -1,0 +1,7 @@
+-
+  name: Playbook with touch command
+  hosts: 192.168.121.64
+  tasks:
+    - 
+      name: Firsk task for Playbook with touch command
+      command: touch abc.txt

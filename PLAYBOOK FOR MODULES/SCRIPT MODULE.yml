@@ -1,0 +1,20 @@
+#Run a script only if file.txt does not exist on the remote node
+- name: Run a script only if file.txt does not exist on the remote node
+  ansible.builtin.script: /some/local/create_file.sh --some-argument 1234
+  args:
+    creates: /the/created/file.txt
+
+                      OR
+- 
+  name: Script Module
+  hosts: centosclient
+  tasks: 
+    -
+      name: Task running for Script module
+      script: helloworld.sh creates=outputhelloworldscript 
+
+#Run a script only if file.txt exists on the remote node
+- name: Run a script only if file.txt exists on the remote node
+  ansible.builtin.script: /some/local/remove_file.sh --some-argument 1234
+  args:
+    removes: /the/removed/file.txt

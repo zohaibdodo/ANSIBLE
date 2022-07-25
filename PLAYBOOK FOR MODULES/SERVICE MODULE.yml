@@ -1,0 +1,9 @@
+- 
+  name: Service Module.
+  hosts: webserver1
+  tasks: 
+    - 
+      name: "Task running for service check"
+      service: 
+        name: apache2
+        state: started #stopped

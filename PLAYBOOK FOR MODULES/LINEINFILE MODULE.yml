@@ -1,0 +1,7 @@
+-
+  name: Running Playbook for lineinfile module
+  hosts: centosclient
+  tasks:
+    - 
+      name: Task for lineinfile
+      lineinfile: path=/tmp/zohaib.txt line="gaurav"
