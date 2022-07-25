@@ -1,4 +1,4 @@
-#ansible all -m setup
+q#ansible all -m setup
 
 #ansible node -m yum -a "name=httpd state=present" -b
 
