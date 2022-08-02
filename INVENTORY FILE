@@ -1,0 +1,26 @@
+sudo mkdir /etc/ansible
+sudo nano /etc/ansible/hosts
+
+webserver1 ansible_host=192.168.40.129 ansible_ssh_pass=vagrant ansible_connection=ssh ansible_port=22 ansible_user=vagrant
+
+
+For inventory file:
+
+vi /etc/ansible/hosts
+
+
+[web-server]
+192.168.14.129
+192.168.14.130
+[app-server]
+192.168.14.131
+
+To use other inventory file:
+
+#ansible all --list-hosts -i myinventory/inventory_file
+
+	6. For keyless system access:
+
+#ssh-keygen
+
+#ssh-copy-id -i root@192.168.14.129
